@@ -1,5 +1,5 @@
                                                   Blind SQL Injection
-Security level: LOW
+## Security level: LOW
 Low darajasi tahlil qilinganda Boolean-Based Blind SQL Injection zaifligini aniqlandi.
 Foydalanuvchi tomonidan kiritilgan id  parametri hech qanday tekshiruv va filtrlashsiz SQL so'roviga qo'shiladi.
 Kodning zaif qismi:
@@ -23,7 +23,7 @@ database()='dvwa' to'g'ri bo'lgani va user_id='1' mavjud bo'lgani uchun so'rov k
 
 ![DVWA Blind SQL Injection](./images/02-dvwa.png)
 
-##Security level: Medium
+## Security level: Medium
 
 SQL Injection'dan himoyalanish uchun mysqli_real_escape_string() funksiyasidan foydalanilgan.
 $id SQL so'roviga qo'shtirnoqsiz qo'shilgan.
@@ -42,7 +42,7 @@ Lekin brauzerning Devtool yoki Burp Suite yordamida <option>  qiymatini o'zgarti
 
 Sleep(5) ishladi va Time-Based Blind SQL injection borligi aniqlandi.
 
-##Security level: High
+## Security level: High
 
 High xavfsizlik darajasini tahlil qilindi va Cookie orqali yuborilgan malumot yordamida Boolean-Based Blind SQL Injection zaifligini aniqlandi.
 Foydalanuvchi kiritgan id qiymati GET yoki POST orqali emas, Cookie orqali olinadi.
