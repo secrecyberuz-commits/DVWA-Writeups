@@ -17,7 +17,7 @@ Qaytmasa: User ID is missing from the database.
 oydalanuvchiga ma'lumotlar chiqarilmaydi, faqat True yoki False natijasi qaytariladi.
 
 Exploit:
-Pyload yuborildi : 1' AND database()='dvwa'
+Pyload yuborildi : ```html 1' AND database()='dvwa' ```
 
 database()='dvwa' to'g'ri bo'lgani va user_id='1' mavjud bo'lgani uchun so'rov kamida bitta satr qaytardi.
 
