@@ -1,5 +1,6 @@
                                           SQL Injection
 Security level: LOW
+
 Bu laboratoriyada foydalanuvchi kiritadigan id parametri hech qanday tekshiruvlarsiz SQL so'rovlariga qo'shiladi.
 Kodning zaif qismi:
 
