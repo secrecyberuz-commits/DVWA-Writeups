@@ -8,16 +8,16 @@ Kodning zaif qismi:
 
 Bunda $id qiymati to'g'ridan-to'g'ri SQL so'roviga qo'shilgani sababli SQL Injection zaifligi ishlaydi. 
 So'rov bajarilgandan so'ng natija quyidagicha tekshiriladi:
-
+```html
     $exists = (mysqli_num_rows($result) > 0);
-
+```
 Agar kamida bitta qism qaytsa: User ID exists in the database.
 Qaytmasa: User ID is missing from the database.
 
 oydalanuvchiga ma'lumotlar chiqarilmaydi, faqat True yoki False natijasi qaytariladi.
 
-    - Exploit:
-Pyload yuborildi : 1' AND database()='dvwa'#
+Exploit:
+Pyload yuborildi : 1' AND database()='dvwa'
 
 database()='dvwa' to'g'ri bo'lgani va user_id='1' mavjud bo'lgani uchun so'rov kamida bitta satr qaytardi.
 
@@ -35,9 +35,9 @@ Medium darajasida foydalanuvchi id qiymatini text input orqali emas, HTML <selec
 Lekin brauzerning Devtool yoki Burp Suite yordamida <option>  qiymatini o'zgartirish mumkin.
 
 1-indeks o'zgartirib ko'rildi.
-
+```html
     <option value="1 AND sleep(5)">SQL</option>
-
+```
 ![DVWA Blind SQL Injection](./images/04-dvwa.png)
 
 Sleep(5) ishladi va Time-Based Blind SQL injection borligi aniqlandi.
@@ -53,14 +53,14 @@ Kodning asosiy qismi:
 Id qiymati hech qanday tekshiruv va filtrlashsiz SQL so'roviga qo'shilmoqda. Natijada foydalanuvchi Cookie qiymatini o'zgartirish orqali SQL buyruqlarini bajarishi mumkin.
 
 Foydalanuvchi tomonidan yuborilgan Cookie tekshirilmaydi.
-
+```html
     $id = $_COOKIE['id'];
-
+```
 Kodning quyidagi qismi noto'g'ri natija qaytganda tasodifiy 2-4 soniya kutadi.
 
 ![DVWA Blind SQL Injection](./images/06-dvwa.png)
 
-    - Exploit:
+Exploit:
 
 Payload 1' AND 1=1# yuborib ko'rildi. 
 1=1 sharti doimo TRUE bo'lganligi sababli so'rov muvaffaqiyatli bajarildi va sahifada quyidagi javob qaytdi.
