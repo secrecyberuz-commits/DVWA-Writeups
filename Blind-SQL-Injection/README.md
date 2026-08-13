@@ -36,9 +36,7 @@ $id SQL so'roviga qo'shtirnoqsiz qo'shilgan.
 ![DVWA Blind SQL Injection](./images/03-dvwa.png)
 
 Medium darajasida foydalanuvchi id qiymatini text input orqali emas, HTML <select> orqali tanlaydi. Brauzer foydalanuvchiga faqat 1 dan 5 gacha bo'lgan qiymatlarni tanlashga ruxsat beradi.
-
 Lekin brauzerning Devtool yoki Burp Suite yordamida <option>  qiymatini o'zgartirish mumkin.
-
 1-indeks o'zgartirib ko'rildi.
 
     <option value="1 AND sleep(5)">SQL</option>
