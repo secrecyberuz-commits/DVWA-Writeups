@@ -18,7 +18,7 @@ Agar kamida bitta qism qaytsa: User ID exists in the database.
 Qaytmasa: User ID is missing from the database.
 Foydalanuvchiga ma'lumotlar chiqarilmaydi, faqat True yoki False natijasi qaytariladi.
 
-    - Exploit:
+#Exploit:
 Pyload yuborildi :
 
     1' AND database()='dvwa'#
@@ -26,7 +26,6 @@ Pyload yuborildi :
 database()='dvwa' to'g'ri bo'lgani va user_id='1' mavjud bo'lgani uchun so'rov kamida bitta satr qaytardi.
 
 ![DVWA Blind SQL Injection](./images/02-dvwa.png)
-
 
 Security level: Medium
 
@@ -47,17 +46,15 @@ Lekin brauzerning Devtool yoki Burp Suite yordamida <option>  qiymatini o'zgarti
 
 Sleep(5) ishladi va Time-Based Blind SQL injection borligi aniqlandi.
 
-
 Security level: High
 
 High xavfsizlik darajasini tahlil qilindi va Cookie orqali yuborilgan malumot yordamida Boolean-Based Blind SQL Injection zaifligini aniqlandi.
-
 Foydalanuvchi kiritgan id qiymati GET yoki POST orqali emas, Cookie orqali olinadi.
 Kodning asosiy qismi:
 
 ![DVWA Blind SQL Injection](./images/05-dvwa.png)
 
-id qiymati hech qanday tekshiruv va filtrlashsiz SQL so'roviga qo'shilmoqda. Natijada foydalanuvchi Cookie qiymatini o'zgartirish orqali SQL buyruqlarini bajarishi mumkin.
+Id qiymati hech qanday tekshiruv va filtrlashsiz SQL so'roviga qo'shilmoqda. Natijada foydalanuvchi Cookie qiymatini o'zgartirish orqali SQL buyruqlarini bajarishi mumkin.
 
 Foydalanuvchi tomonidan yuborilgan Cookie tekshirilmaydi.
 
@@ -73,4 +70,5 @@ Payload 1' AND 1=1# yuborib ko'rildi.
 1=1 sharti doimo TRUE bo'lganligi sababli so'rov muvaffaqiyatli bajarildi va sahifada quyidagi javob qaytdi.
 
 ![DVWA Blind SQL Injection](./images/07-dvwa.png)
+
 
