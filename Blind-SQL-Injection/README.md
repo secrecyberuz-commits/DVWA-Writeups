@@ -1,9 +1,7 @@
                                                   Blind SQL Injection
-##Security level: LOW 
-
+Security level: LOW
 Low darajasi tahlil qilinganda Boolean-Based Blind SQL Injection zaifligini aniqlandi.
 Foydalanuvchi tomonidan kiritilgan id  parametri hech qanday tekshiruv va filtrlashsiz SQL so'roviga qo'shiladi.
-
 Kodning zaif qismi:
 
 ![DVWA Blind SQL Injection](./images/01-dvwa.png)
@@ -15,12 +13,11 @@ So'rov bajarilgandan so'ng natija quyidagicha tekshiriladi:
 
 Agar kamida bitta qism qaytsa: User ID exists in the database.
 Qaytmasa: User ID is missing from the database.
-Foydalanuvchiga ma'lumotlar chiqarilmaydi, faqat True yoki False natijasi qaytariladi.
 
-#Exploit:
-Pyload yuborildi :
+oydalanuvchiga ma'lumotlar chiqarilmaydi, faqat True yoki False natijasi qaytariladi.
 
-    1' AND database()='dvwa'#
+    - Exploit:
+Pyload yuborildi : 1' AND database()='dvwa'#
 
 database()='dvwa' to'g'ri bo'lgani va user_id='1' mavjud bo'lgani uchun so'rov kamida bitta satr qaytardi.
 
@@ -39,7 +36,7 @@ Lekin brauzerning Devtool yoki Burp Suite yordamida <option>  qiymatini o'zgarti
 
 1-indeks o'zgartirib ko'rildi.
 
-<option value="1 AND sleep(5)">SQL</option>
+    <option value="1 AND sleep(5)">SQL</option>
 
 ![DVWA Blind SQL Injection](./images/04-dvwa.png)
 
@@ -57,13 +54,11 @@ Id qiymati hech qanday tekshiruv va filtrlashsiz SQL so'roviga qo'shilmoqda. Nat
 
 Foydalanuvchi tomonidan yuborilgan Cookie tekshirilmaydi.
 
-$id = $_COOKIE['id'];
-
-![DVWA Blind SQL Injection](./images/06-dvwa.png)
+    $id = $_COOKIE['id'];
 
 Kodning quyidagi qismi noto'g'ri natija qaytganda tasodifiy 2-4 soniya kutadi.
 
-
+![DVWA Blind SQL Injection](./images/06-dvwa.png)
 
     - Exploit:
 
