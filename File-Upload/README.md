@@ -14,6 +14,7 @@ Exploit:
 Test uchun shell.php file yaratildi uning ichida `<?php echo "DVWA PHP TEST"; ?>` payload yozildi.
 
 Natija:
+``` ```
 ![DVWA FIle Upload](./images/01-file.png)
 
 # Security Level: Medium
