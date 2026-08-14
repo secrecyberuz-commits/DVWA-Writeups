@@ -1,4 +1,4 @@
-<img width="647" height="146" alt="image" src="https://github.com/user-attachments/assets/6c6ba16a-9555-47e6-b078-6438bea6594b" /># Security Level: LOW
+# Security Level: LOW
 
 Low level source kodida yuklanayotgan fayl uchun extension, fayl mazmuni tekshirilmaydi.
 ```
